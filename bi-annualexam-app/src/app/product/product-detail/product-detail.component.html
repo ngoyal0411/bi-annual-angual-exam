@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="md-padding" layout="row" layout-wrap>
+    <mat-card *ngFor="let news of latestNews">
+      <mat-card-header>
+        <mat-card-title>
+          <button
+            type="button"
+            mat-raised-button
+            color="accent"
+            (click)="addToCart()"
+          >
+            Add to cart
+          </button>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <div class="container">
+            <p>{{ news.summary }}</p>
+          </div>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <h6>Read More</h6>
+        <p>{{ news.fullNews }}</p>
+      </mat-card-content>
+    </mat-card>
+    <div class="bottom-div"></div>
+  </div>
+</div>
